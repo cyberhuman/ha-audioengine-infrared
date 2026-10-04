@@ -1,0 +1,49 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Set up Audioengine speakers",
+        "description": "Controls Audioengine A5+ powered speakers through an infrared emitter such as a Broadlink RM. State is assumed: Sleep and Mute are toggles on the remote and the speakers cannot report back.",
+        "data": {
+          "name": "Name",
+          "infrared_entity_id": "Infrared emitter",
+          "infrared_receiver_entity_id": "Infrared receiver"
+        },
+        "data_description": {
+          "infrared_entity_id": "The infrared emitter entity that points at the left (powered) speaker.",
+          "infrared_receiver_entity_id": "Optional. If your blaster can receive, the entity keeps in sync when the physical remote is used."
+        }
+      }
+    },
+    "abort": {
+      "no_infrared_entities": "No infrared emitter found. Set up a device that provides one (for example Broadlink) first."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Audioengine speaker options",
+        "data": {
+          "infrared_entity_id": "Infrared emitter",
+          "infrared_receiver_entity_id": "Infrared receiver"
+        }
+      }
+    }
+  },
+  "entity": {
+    "button": {
+      "sleep": {
+        "name": "Sleep"
+      },
+      "mute": {
+        "name": "Mute"
+      },
+      "volume_down": {
+        "name": "Volume down"
+      },
+      "volume_up": {
+        "name": "Volume up"
+      }
+    }
+  }
+}
